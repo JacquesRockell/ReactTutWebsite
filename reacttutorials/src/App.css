@@ -1,0 +1,9 @@
+.page{
+    font-family: 'Montserrat';   
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    margin-top: 76px;  
+    opacity: 100;
+    background-image: linear-gradient(to bottom, rgba(67,169,170,1), rgba(105,67,170,1));
+}
