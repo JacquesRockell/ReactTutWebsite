@@ -55,6 +55,6 @@ const activeStyle = {
 
 const navStyle = {
     background: 'rgba( 76, 84, 91 )',
-    background: 'rgba( 76, 84, 91, .75 )',
-    backdropFilter: 'blur(4px)',
+    background: 'rgba( 76, 84, 91, .80 )',
+    backdropFilter: 'blur(2px)',
 }

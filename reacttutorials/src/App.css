@@ -2,8 +2,12 @@
     font-family: 'Montserrat';   
 }
 
-.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-    margin-top: 76px;  
-    opacity: 100;
-    background-image: linear-gradient(to bottom, rgba(67,169,170,1), rgba(105,67,170,1));
+.TutText{
+    color: rgb(85, 85, 85);
+    font-size: 20px;
+}
+
+.os-scrollbar-handle{
+    background: rgba(0, 0, 0, 0) !important;
+    background-image: linear-gradient(to bottom, rgba(67, 168, 170, 1), rgba(105,67,170,1)) !important;  
 }

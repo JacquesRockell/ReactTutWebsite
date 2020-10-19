@@ -4,16 +4,26 @@ import Button from 'react-bootstrap/Button';
 import HeroImg from './HeroImg.jpg';
 import { Link } from 'react-router-dom';
 
-export default function HeroSection() {
-    return (
-        <div class="d-flex align-items-center text-white" fluid style={heroStyle}>
-            <Container style={{ maxWidth: '1400px', padding: '0' }}>
-                <h1 className="font-weight-bold" style={{ fontSize: '80px', marginBottom: '3rem'}}>Learn Reactjs</h1>
-                <p style={{maxWidth: '500px', marginBottom: '3rem', fontSize: '18px'}} > Enim mollit adipisicing qui excepteur eiusmod laboris. Tempor commodo occaecat excepteur dolore elit elit dolor fugiat. Sunt voluptate laboris elit magna quis aliqua eu ea irure.</p>
-                <Button style={buttonStyle}><Link className="text-white text-decoration-none" to="/tutorials">Learn React</Link></Button>
-            </Container>  
-        </div>                   
-    )
+
+
+export default class HeroSection extends React.Component {
+    constructor(props) {
+        super(props);        
+    }
+
+    render() {
+        return (
+            <div class="d-flex align-items-center text-white" fluid style={heroStyle}>
+                <Container style={{ maxWidth: '1400px', padding: '0' }}>
+                    <h1 className="font-weight-bold" style={{ fontSize: '80px', marginBottom: '3rem'}}>Learn Reactjs</h1>
+                    <p style={{maxWidth: '500px', marginBottom: '3rem', fontSize: '18px'}} > Enim mollit adipisicing qui excepteur eiusmod laboris. Tempor commodo occaecat excepteur dolore elit elit dolor fugiat. Sunt voluptate laboris elit magna quis aliqua eu ea irure.</p>
+                    <Button onClick={this.scrollToTop} style={buttonStyle}>
+                        <Link className="text-white text-decoration-none" to="/tutorials">Learn React</Link>
+                    </Button>
+                </Container>  
+            </div>                   
+        )
+    }
 }
 
 const heroStyle = { 

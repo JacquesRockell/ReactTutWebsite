@@ -1,10 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.min.css';
+import { Routes, Route } from 'react-router-dom';
 
 //Components
 import Header from './components/layout/Header';
@@ -14,22 +11,24 @@ import Home from './components/pages/Home';
 import Tutorials from './components/pages/Tutorials';
 
 
-function App() {
-  return (
-    <div data-simplebar className="page">
-      <Router>
-      <Header/> 
-      <SimpleBar style={{ maxHeight: '100vh' }}>
+class App extends React.Component {
+  constructor(props) {
+    super(props); 
+  }
+
+  render() {
+    return (
+      <div className="page">    
+        <Header/>  
         <Routes>
-          <Route path="/" element={<Home />}/>
+          <Route path="/" element={<Home />} />
           <Route path="/tutorials/*" element={<Tutorials />}/>
-          <Route path="*" element={<PageNotFound />}/>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>                                                  
-        <Footer/> 
-      </SimpleBar> 
-      </Router>           
-    </div>
-  );
+        <Footer/>              
+      </div>
+    );
+  }
 }
 
 export default App;
